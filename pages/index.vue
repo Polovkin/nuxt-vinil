@@ -1,16 +1,17 @@
 <template>
   <section>
-    <h1>Nuxt</h1>
+
   </section>
 </template>
 
-<script>
+<script lang="ts">
+import {Component, Vue,} from 'nuxt-property-decorator'
+import User from "../components/User.vue";
 
-
-export default {
-  components: {
-
-  }
+@Component({
+  components: {User}
+})
+export default class index extends Vue {
 }
 </script>
 <style lang="scss">

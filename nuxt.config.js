@@ -16,7 +16,9 @@ export default {
     styleResources: {
         scss: '@/assets/scss/core/base.scss'
     },
-    plugins: [],
+    plugins: [
+            'api/api.ts'
+    ],
 
     components: true,
 

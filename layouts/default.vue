@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header/>
+    <Header :prop-test="'1'"/>
     <div class="container">
       <h1>{{ data }}</h1>
       <nuxt/>
