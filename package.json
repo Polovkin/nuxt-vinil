@@ -9,6 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/device": "^1.2.7",
     "@nuxtjs/pwa": "^3.0.2",
@@ -18,6 +19,9 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
+    "@nuxt/types": "^2.14.12",
+    "@nuxt/typescript-build": "^2.0.3",
+    "@nuxtjs/eslint-config-typescript": "^5.0.0",
     "autoprefixer": "^9.8.6",
     "breakpoint-sass": "^2.7.1",
     "cssnano": "^4.1.10",
@@ -40,5 +44,6 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS -g './commitlint.js'"
     }
-  }
+  },
+  "lint": "eslint --ext .ts,.js,.vue ."
 }
