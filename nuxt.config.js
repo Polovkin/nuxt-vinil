@@ -20,7 +20,7 @@ export default {
 
     components: true,
 
-    buildModules: ['@nuxt/typescript-build']
+    buildModules: ['@nuxt/typescript-build'],
 
     modules: [
         '@nuxtjs/axios',

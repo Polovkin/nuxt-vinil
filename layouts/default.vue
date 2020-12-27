@@ -1,20 +1,26 @@
 <template>
   <div>
-    <Navbar/>
+    <Header/>
     <div class="container">
+      <h1>{{ data }}</h1>
       <nuxt/>
     </div>
   </div>
 
 </template>
 
-<script>
-import Navbar from "~/components/Navbar";
+<script lang="ts">
 
-export default {
-  components: {Navbar},
-  data() {
-    return {}
-  }
+import {Component, Vue} from 'nuxt-property-decorator'
+import Header from "~/components/Header.vue";
+
+@Component({
+  components: {Header}
+})
+
+export default class Default extends Vue {
+
+  public data: string = 'RuleTester'
+
 }
 </script>
