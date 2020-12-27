@@ -12,8 +12,16 @@
 
 <script lang="ts">
 import {Vue, Component} from 'vue-property-decorator'
+import { getModule } from 'vuex-module-decorators'
+import Test from '~/store/test'
 
-@Component
+@Component({
+  mounted (this: Navbar) {
+    const test = getModule(Test, this.$store)
+    console.log(test.count) // undefined
+    console.log(this.$store.state['test'].count) // 42
+  }
+})
 export default class Navbar extends Vue {
   public header: string = 'value'
 

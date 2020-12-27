@@ -34,7 +34,8 @@
     "postcss-sort-media-queries": "^1.7.26",
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
-    "sort-css-media-queries": "^1.5.2"
+    "sort-css-media-queries": "^1.5.2",
+    "vuex-module-decorators": "^1.0.1"
   },
   "config": {
     "commitizen": {
