@@ -28,10 +28,19 @@ export default {
         '@nuxtjs/style-resources',
     ],
 
-
+    babel: {
+        presets(env, [ preset, options ]) {
+            return [
+                [ "@nuxt/babel-preset-app", options ]
+            ]
+        }
+    },
     axios: {},
 
     build: {
+        transpile: [
+            'vuex-module-decorators'
+        ],
         //transpile: ['vuetify'] //IE11
         postcss: [
             require('autoprefixer')({}),
