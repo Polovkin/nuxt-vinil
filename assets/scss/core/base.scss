@@ -1,0 +1,17 @@
+@import '../animation/animation';
+//Variables
+@import 'responsive';
+@import 'colors';
+@import 'mixins';
+@import 'shapes';
+@import 'placeholders';
+@import "~breakpoint-sass";
+
+//Globals
+@import 'typography';
+@import 'globals';
+@import 'forms';
+@import 'buttons';
+
+
+//Animations
