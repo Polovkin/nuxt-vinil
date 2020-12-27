@@ -14,13 +14,10 @@
     "@nuxtjs/pwa": "^3.0.2",
     "@nuxtjs/style-resources": "^1.0.0",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.5",
-    "nuxt-property-decorator": "^2.8.8"
+    "nuxt": "^2.14.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
-    "@nuxt/typescript-build": "^2.0.3",
-    "@nuxtjs/eslint-config-typescript": "^5.0.0",
     "autoprefixer": "^9.8.6",
     "breakpoint-sass": "^2.7.1",
     "cssnano": "^4.1.10",

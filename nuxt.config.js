@@ -16,13 +16,11 @@ export default {
     styleResources: {
         scss: '@/assets/scss/core/base.scss'
     },
-    plugins: [
-            'api/api.ts'
-    ],
+    plugins: [],
 
     components: true,
 
-    buildModules: ['@nuxt/typescript-build'],
+    buildModules: [],
 
     modules: [
         '@nuxtjs/axios',

@@ -1,17 +1,17 @@
 <template>
   <section>
-
+    <h1>Nuxt</h1>
   </section>
 </template>
 
-<script lang="ts">
-import {Component, Vue,} from 'nuxt-property-decorator'
-import User from "../components/User.vue";
+<script>
 
-@Component({
-  components: {User}
-})
-export default class index extends Vue {
+import Navbar from "~/components/Navbar";
+
+export default {
+  components: {
+    Navbar
+  }
 }
 </script>
 <style lang="scss">
