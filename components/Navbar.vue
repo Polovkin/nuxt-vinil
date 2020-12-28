@@ -2,7 +2,7 @@
   <header>
     <div class="container">
 
-      <a href="/">{{ }}</a>
+      <a href="/">{{ my }}</a>
       <a href="/about">About</a>
       <a href="/users">Users</a>
     </div>
@@ -12,17 +12,15 @@
 
 <script lang="ts">
 import {Vue, Component} from 'nuxt-property-decorator'
+import {myMod} from '~/store'
 
 
-
-@Component({
-
-})
+@Component({})
 export default class Navbar extends Vue {
-  mounted() {
-    console.log(1)
-  }
 
+  get my() {
+    return myMod.wheels
+  }
 }
 </script>
 
