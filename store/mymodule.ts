@@ -1,4 +1,5 @@
-import { Module, VuexModule, Mutation } from 'vuex-module-decorators'
+import {Module, VuexModule, Mutation, Action} from 'vuex-module-decorators'
+import {$axios} from '~/utils/api'
 
 @Module({
     name: 'mymodule',
@@ -6,14 +7,23 @@ import { Module, VuexModule, Mutation } from 'vuex-module-decorators'
     namespaced: true,
 })
 export default class MyModule extends VuexModule {
-    wheels = 123
+    users = []
+
 
     @Mutation
-    incrWheels(extra: number) {
-        this.wheels += extra
+    setUsers(users: any) {
+        this.users = users
     }
 
-    get axles() {
-        return this.wheels / 2
+    @Action({rawError: true})
+    async getUsers() {
+        const response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+        if (response.ok) {
+            let json = await response.json();
+            this.setUsers(json)
+        } else {
+            alert("Ошибка HTTP: " + response.status);
+        }
+
     }
 }

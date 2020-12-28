@@ -2,9 +2,7 @@
   <header>
     <div class="container">
 
-      <a href="/">{{ my }}</a>
-      <a href="/about">About</a>
-      <a href="/users">Users</a>
+      <a href="/">{{ test }}</a>
     </div>
   </header>
 </template>
@@ -17,10 +15,14 @@ import {myMod} from '~/store'
 
 @Component({})
 export default class Navbar extends Vue {
-
-  get my() {
-    return myMod.wheels
+  get test() {
+    return myMod.users
   }
+
+  async created() {
+    await myMod.getUsers()
+  }
+
 }
 </script>
 
