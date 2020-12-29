@@ -1,10 +1,10 @@
 <template>
   <section>
-    <v-container>
+
       <h1>User {{ user.name }}</h1>
       <hr>
       <h3>{{ user.email }}</h3>
-    </v-container>
+
   </section>
 </template>
 

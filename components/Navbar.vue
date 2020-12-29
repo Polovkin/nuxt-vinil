@@ -2,7 +2,8 @@
   <header>
     <div class="container">
       <h1>Heroku master</h1>
-      <a href="/">{{ test }}</a>
+      <nuxt-link to="/">Home</nuxt-link>
+      <nuxt-link to="/users">Users</nuxt-link>
     </div>
   </header>
 </template>
@@ -10,18 +11,12 @@
 
 <script lang="ts">
 import {Vue, Component} from 'nuxt-property-decorator'
-import {myMod} from '~/store'
+import {usersModule} from '~/store'
 
 
 @Component({})
 export default class Navbar extends Vue {
-  get test() {
-    return myMod.users
-  }
 
-  async created() {
-    await myMod.getUsers()
-  }
 
 }
 </script>
