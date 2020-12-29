@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="container">
-
+      <h1>Heroku master</h1>
       <a href="/">{{ test }}</a>
     </div>
   </header>
