@@ -35,24 +35,6 @@ export default class Users extends Vue {
     this.$router.push('/users/' + user)
   }
 }
-//export default {
-  // async fetch({store}) {
-  //   if (store.getters['users/users'].length === 0) {
-  //     await store.dispatch('users/fetch')
-  //   }
-  // },
-  // name: "index",
-  // computed: {
-  //   users() {
-  //     return this.$store.getters['users/users']
-  //   }
-  // },
-  // methods: {
-  //   openUser(user) {
-  //     this.$router.push('/users/' + user)
-  //   }
-  // },
-//}
 </script>
 
 <style scoped>
