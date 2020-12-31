@@ -54,9 +54,9 @@ $phone__small                 : $width__min            $width__mobile-min;
 $imgPath: '/assets/img/';
 $iconsPath: $imgPath +'icons/';
 
-body > section,
+section,
 .section {
-  $padding: 1rem;
+  $padding: 20px;
   position: relative;
 
   overflow: hidden;

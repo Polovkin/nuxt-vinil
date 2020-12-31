@@ -1,21 +1,21 @@
 <template>
-  <section>
-    <h1>Nuxt</h1>
-  </section>
+  <div>
+    <Main/>
+  </div>
+
 </template>
 
-<script>
+<script lang="ts">
+import {Vue, Component} from 'nuxt-property-decorator'
+import Main from '~/components/sections/Main'
 
-import Navbar from "~/components/Navbar";
+@Component({
+  component: {Main}
+})
+export default class Index extends Vue {
 
-export default {
-  components: {
-    Navbar
-  }
 }
 </script>
 <style lang="scss">
-h1 {
-  color: $color__primary;
-}
+
 </style>

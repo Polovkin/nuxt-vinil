@@ -1,14 +1,16 @@
 <template>
   <section>
+
     <h1>Users page</h1>
     <ul>
       <li
           v-for="user of usersData"
           :key="user.id"
       >
-        <button @click="openUser(user.id)">
+        <v-btn color="primary"
+               @click="openUser(user.id)">
           {{ user.name }}
-        </button>
+        </v-btn>
       </li>
     </ul>
   </section>

@@ -1,20 +1,21 @@
 <template>
   <div>
-    <Navbar/>
-    <div class="container">
-      <nuxt/>
-    </div>
+    <Header/>
+    <nuxt/>
+    <Footer/>
   </div>
-
 </template>
 
 <script>
-import Navbar from "~/components/Navbar";
+import Header from '~/components/layout/Header'
+import Footer from '~/components/layout/Footer'
 
 export default {
-  components: {Navbar},
+  components: {Footer, Header},
   data() {
-    return {}
+    return {
+      drawer: null
+    }
   }
 }
 </script>
