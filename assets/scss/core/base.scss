@@ -1,3 +1,4 @@
+@import "~normalize-scss/sass/_normalize.scss";
 @import '../animation/animation';
 //Variables
 @import 'responsive';
@@ -12,6 +13,7 @@
 @import 'globals';
 @import 'forms';
 @import 'buttons';
+@import 'variabbles';
 
 
 //Animations
