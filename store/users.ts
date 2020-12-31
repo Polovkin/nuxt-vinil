@@ -11,7 +11,7 @@ export default class Users extends VuexModule {
 
 
     @Mutation
-    setUsers(users: any) {
+    setUsers(users: never[]) {
         this.users = users
     }
 
