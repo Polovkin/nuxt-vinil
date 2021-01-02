@@ -1,9 +1,7 @@
 <template>
-  <main class="main">
-    <div class="container">
-     <h1>Виниловые пластинки</h1>
-    </div>
-  </main>
+  <Section>
+    <h2>Items</h2>
+  </Section>
 </template>
 
 <script lang="ts">
@@ -13,7 +11,7 @@ import Section from '~/components/layout/Section'
 @Component({
   components: { Section }
 })
-export default class Main extends Vue {
+export default class ItemsBlock extends Vue {
 
 }
 </script>

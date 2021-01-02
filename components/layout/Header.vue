@@ -2,18 +2,19 @@
   <header class="header">
     <div class="container">
       <div class="header__wrap">
-        <div class="header__logo">Logo</div>
+        <Logotype />
+        <Navbar />
       </div>
-
     </div>
-
   </header>
 </template>
 
 <script lang="ts">
-import {Vue, Component} from 'nuxt-property-decorator'
+import { Vue, Component } from 'nuxt-property-decorator'
+import Logotype from '@/components/layout/Logotype.vue'
+import Navbar from '@/components/Navbar.vue'
 
-@Component({})
+@Component({ components: { Logotype, Navbar } })
 export default class Header extends Vue {
 
 }

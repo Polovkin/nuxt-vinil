@@ -54,23 +54,6 @@ $phone__small                 : $width__min            $width__mobile-min;
 $imgPath: '/assets/img/';
 $iconsPath: $imgPath +'icons/';
 
-section,
-.section {
-  $padding: 20px;
-  position: relative;
-
-  overflow: hidden;
-  @include breakpoint($width__laptop-min) {
-    padding: ($padding * 3) 0;
-  }
-  @include breakpoint($width__tablet-land) {
-    padding: ($padding * 2) 0;
-  }
-  @include breakpoint($width__tablet-port) {
-    padding: $padding 0;
-  }
-}
-
 .container {
   flex: 0 0 auto;
   margin: 0 auto;
@@ -96,4 +79,3 @@ section,
     max-width: $max-width__mobile-max;
   }
 }
-

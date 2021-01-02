@@ -8,6 +8,7 @@
   background-color: $color__primary;
 
   &__wrap {
+    height: $header_height;
     display: flex;
     align-items: center;
     justify-content: space-between;
