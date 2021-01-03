@@ -1,0 +1,29 @@
+@import "~normalize.css";
+@import '~@/assets/scss/animation/animation';
+@import '~@/assets/scss/core/typography';
+
+.container {
+  flex: 0 0 auto;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  transition: all $animation-fast;
+  @include breakpoint(min-width $width__desktop-hd + 1) {
+    max-width: $width__desktop-hd-min;
+  }
+  @include breakpoint(min-width $width__desktop-hd-min) {
+    max-width: $max-width__desktop-hd-min;
+  }
+  @include breakpoint(min-width $width__laptop-min) {
+    max-width: $max-width__desktop-min;
+  }
+  @include breakpoint(min-width $width__tablet-land) {
+    max-width: $max-width__tablet-land;
+  }
+  @include breakpoint(min-width $width__tablet-port) {
+    max-width: $max-width__tablet-port;
+  }
+  @include breakpoint(min-width $width__mobile-max) {
+    max-width: $max-width__mobile-max;
+  }
+}
