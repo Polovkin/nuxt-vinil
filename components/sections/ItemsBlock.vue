@@ -1,6 +1,5 @@
 <template>
   <Section>
-    <h2>Items</h2>
   </Section>
 </template>
 
@@ -17,5 +16,5 @@ export default class ItemsBlock extends Vue {
 </script>
 
 <style lang="scss">
-@import "./assets/scss/sections/main";
+
 </style>

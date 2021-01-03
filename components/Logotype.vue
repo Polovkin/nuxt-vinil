@@ -1,10 +1,11 @@
 <template>
-  <nuxt-link to="/"
-             class="logotype"
+  <nuxt-link
+    to="/"
+    class="logotype"
   >
     <img
-        src="/icons/logo.svg"
-        alt="logotype"
+      src="/icons/logo.svg"
+      alt="logotype"
     >
   </nuxt-link>
 </template>

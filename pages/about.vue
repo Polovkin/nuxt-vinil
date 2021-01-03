@@ -3,7 +3,6 @@
     <nuxt-link to="/">
       home
     </nuxt-link>
-    <h1>About</h1>
   </section>
 </template>
 

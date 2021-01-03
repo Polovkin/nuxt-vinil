@@ -1,9 +1,7 @@
 <template>
   <main class="main">
     <div class="container">
-      <nuxt-link to="/about">
-        about
-      </nuxt-link>
+
       <h1>Виниловые пластинки</h1>
     </div>
   </main>
