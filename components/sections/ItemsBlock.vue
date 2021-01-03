@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
-import Section from '~/components/layout/Section'
+import Section from '~/components/layout/Section.vue'
 
 @Component({
   components: { Section }

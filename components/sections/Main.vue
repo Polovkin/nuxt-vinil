@@ -1,14 +1,17 @@
 <template>
   <main class="main">
     <div class="container">
-     <h1>Виниловые пластинки</h1>
+      <nuxt-link to="/about">
+        about
+      </nuxt-link>
+      <h1>Виниловые пластинки</h1>
     </div>
   </main>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
-import Section from '~/components/layout/Section'
+import Section from '~/components/layout/Section.vue'
 
 @Component({
   components: { Section }

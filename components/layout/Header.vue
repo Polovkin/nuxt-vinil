@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
-import Logotype from '@/components/layout/Logotype.vue'
+import Logotype from '@/components/Logotype.vue'
 import Navbar from '@/components/Navbar.vue'
 
 @Component({ components: { Logotype, Navbar } })
