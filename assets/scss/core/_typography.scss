@@ -1,22 +1,3 @@
-$font__line-height: auto;
-$font__size: 18px;
-$font__weight: normal;
-$font__family: 'Roboto';
-$font__style: sans-serif;
-$font__file-name: 'Roboto-';
-$font__path: '~assets/fonts/#{$font__file-name}';
-$font__ext: (woff2, woff);
-$font__types: (
-                ('Medium', 500, normal),
-                ('Bold', bold, normal),
-                ('Regular', normal, normal),
-);
-
-@each $name, $weight, $style in $font__types {
-  @include font-face($font__family, $font__path+$name, $weight, $style, $font__ext);
-}
-
-
 html {
   font-size: $font__size;
   line-height: $font__line-height;
@@ -145,8 +126,44 @@ input[type='submit']:focus {
   outline: 0;
 }
 
+
+select {
+  border: 1px solid #ccc;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+embed,
+iframe,
+object,
+textarea {
+  width: 100%;
+}
+
+form {
+  label {
+    display: block;
+    width: 100%;
+  }
+
+  input, textarea {
+    width: inherit;
+    font-family: $font__family;
+    font-size: rem($font__size);
+
+    color: $color__font--primary;
+  }
+}
+
+label {
+  display: block;
+}
+
 input {
   box-shadow: none;
+  outline: none;
 
   &:-webkit-autofill,
   &:-webkit-autofill:focus,
@@ -190,35 +207,28 @@ textarea {
   }
 }
 
-select {
-  border: 1px solid #ccc;
-
-  &:focus {
-    outline: 0;
-  }
-}
-
-embed,
-iframe,
-object,
-textarea {
+.container {
+  flex: 0 0 auto;
+  margin: 0 auto;
+  padding: 0 15px;
   width: 100%;
-}
-
-form {
-  label {
-    display: block;
-    width: 100%;
+  transition: all $animation-fast;
+  @include breakpoint(min-width $width__desktop-hd + 1) {
+    max-width: $width__desktop-hd-min;
   }
-
-  input, textarea {
-    width: inherit;
-    font-family: $font__family;
-    font-size: rem($font__size);
-
-    color: $color__font--primary;
+  @include breakpoint(min-width $width__desktop-hd-min) {
+    max-width: $max-width__desktop-hd-min;
+  }
+  @include breakpoint(min-width $width__laptop-min) {
+    max-width: $max-width__desktop-min;
+  }
+  @include breakpoint(min-width $width__tablet-land) {
+    max-width: $max-width__tablet-land;
+  }
+  @include breakpoint(min-width $width__tablet-port) {
+    max-width: $max-width__tablet-port;
+  }
+  @include breakpoint(min-width $width__mobile-max) {
+    max-width: $max-width__mobile-max;
   }
 }
-
-
-
