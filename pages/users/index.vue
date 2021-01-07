@@ -1,42 +1,43 @@
 <template>
   <section>
-
     <h1>Users page</h1>
     <ul>
       <li
-          v-for="user of usersData"
-          :key="user.id"
+        v-for="user of usersData"
+        :key="user.id"
       >
-        <v-btn color="primary"
-               @click="openUser(user.id)">
+        <button
+          color="primary"
+          @click="openUser(user.id)"
+        >
           {{ user.name }}
-        </v-btn>
+        </button>
       </li>
     </ul>
   </section>
 </template>
 
 <script lang="ts">
-import {Vue, Component} from 'nuxt-property-decorator'
-import {usersModule} from '~/store'
+import { Vue, Component } from 'nuxt-property-decorator'
+import { usersModule } from '~/store'
 
 @Component({})
 export default class Users extends Vue {
-  async fetch({store}: { store: any }) {
+  async fetch ({ store }: { store: any }) {
     if (store.getters['users/GET_USERS'].length === 0) {
       await store.dispatch('users/getUsers')
     }
   }
 
-  get usersData() {
+  get usersData () {
     return usersModule.users
   }
 
-  async mounted() {
+  async mounted () {
     await usersModule.getUsers()
   }
 
-  openUser(user: string) {
+  openUser (user: string) {
     this.$router.push('/users/' + user)
   }
 }

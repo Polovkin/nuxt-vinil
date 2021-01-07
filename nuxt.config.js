@@ -12,6 +12,7 @@ export default {
     ]
   },
   css: [
+
   ],
   styleResources: {
     scss: '@/assets/scss/core/_global.scss'
