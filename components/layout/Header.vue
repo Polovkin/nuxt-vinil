@@ -1,10 +1,8 @@
 <template>
   <header class="header">
-    <div class="container">
-      <div class="header__wrap">
-        <Logotype />
-        <Navbar />
-      </div>
+    <div class="header__wrap container">
+      <Logotype />
+      <Navbar />
     </div>
   </header>
 </template>

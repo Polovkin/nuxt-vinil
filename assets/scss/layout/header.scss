@@ -1,9 +1,15 @@
 .header {
   z-index: z(header);
-
+  position: fixed;
+  width: 100%;
   height: $header_height;
+  background-color: $color__primary;
+
 
   &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: $header_height;
   }
 }

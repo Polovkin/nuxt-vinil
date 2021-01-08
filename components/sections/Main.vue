@@ -7,7 +7,7 @@
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporesse cillum dolore eu fugiat nulla eu fugiat nulla pariatur.
       </p>
-      <ButtonWave class="">Button</ButtonWave>
+      <ButtonWave class="btn-primary">Заказать</ButtonWave>
     </div>
   </main>
 </template>

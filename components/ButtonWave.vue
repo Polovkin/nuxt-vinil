@@ -1,17 +1,17 @@
 <template>
   <button
-    ref="button"
-    class="material-btn uppercase relative overflow-hidden cursor-pointer rounded-2xl"
-    :class="btnClass"
-    @mousedown="mousedown"
+      ref="button"
+      class="material-btn"
+      :class="btnClass"
+      @mousedown="mousedown"
   >
-
     <span
-      ref="wave"
-      class="wave absolute rounded-full"
+        ref="wave"
+        class="wave"
     />
-    <b class="material-btn__text relative"><slot /></b>
-
+    <b class="material-btn__text">
+      <slot/>
+    </b>
   </button>
 </template>
 
@@ -62,32 +62,47 @@ export default {
 >
 $btn_text-color: $color__font--primary;
 $btn_bg-color: $color__primary;
-$btn_wave-color: lighten($btn_bg-color,10%);
+$btn_wave-color: lighten($btn_bg-color, 10%);
 
 .material-btn {
+  padding: 10px 20px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+  cursor: pointer;
   color: $btn_text-color;
   background-color: $btn_bg-color;
-  padding: 10px 25px;
+  text-transform: uppercase;
 
   &--active .wave {
     animation: wave-animation .8s;
   }
+
   &:active {
     .material-btn__text {
       top: 1px;
     }
   }
+
+  &__text {
+    position: relative;
+  }
+
 }
 
 .wave {
+  position: absolute;
   top: 0;
   left: 0;
 
   width: 15px;
   height: 15px;
 
+  border-radius: 100%;
   transform: scale(0);
   background: $btn_wave-color;
+
 }
 
 @keyframes wave-animation {

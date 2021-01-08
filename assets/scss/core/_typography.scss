@@ -228,11 +228,10 @@ textarea {
 }
 
 .container {
+  width: 100%;
   flex: 0 0 auto;
   margin: 0 auto;
   padding: 0 15px;
-  display: flex;
-  flex-direction: column;
   transition: all $animation-fast;
   @include breakpoint(min-width $width__desktop-hd + 1) {
     max-width: $width__desktop-hd-min;
