@@ -1,21 +1,4 @@
-$font__line-height: auto;
 $font__size: 18px;
-$font__weight: normal;
-$font__family: 'Roboto';
-$font__style: sans-serif;
-$font__file-name: 'Roboto-';
-$font__path: '~assets/fonts/#{$font__file-name}';
-$font__ext: (woff2, woff);
-$font__types: (
-                ('Medium', 500, normal),
-                ('Bold', bold, normal),
-                ('Regular', normal, normal),
-);
-
-@each $name, $weight, $style in $font__types {
-  @include font-face($font__family, $font__path+$name, $weight, $style, $font__ext);
-}
-
 
 $header_height: 60px;
 $input__font-size: $font__size;

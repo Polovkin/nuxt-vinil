@@ -21,7 +21,7 @@ export default {
 
   components: true,
 
-  buildModules: ['@nuxt/typescript-build', '@nuxtjs/tailwindcss'],
+  buildModules: ['@nuxt/typescript-build'],
 
   modules: [
     '@nuxtjs/axios',
@@ -57,7 +57,6 @@ export default {
       require('postcss-sort-media-queries')({
         sort: require('sort-css-media-queries')
       }),
-      require('tailwindcss')
     ]
   }
 }

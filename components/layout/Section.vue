@@ -1,5 +1,5 @@
 <template>
-  <section :class="sectionClass">
+  <section class="" :class="sectionClass">
     <div class="container">
       <slot />
     </div>
@@ -18,10 +18,8 @@ export default class Section extends Vue {
 <style lang="scss">
 section,
 .section {
-  $padding: 20px;
-  position: relative;
+  $padding: 1rem;
 
-  overflow: hidden;
   @include breakpoint($width__laptop-min) {
     padding: ($padding * 3) 0;
   }
