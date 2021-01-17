@@ -6,16 +6,25 @@
     size: cover;
     position: center;
   };
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  //&:after {
-  //  @include pseudoElement(100%);
-  //  top: 0;
-  //  left: 0;
-  //  background-color: rgb($color__secondary, .8);
-  //}
+  &:after {
+    @include pseudoElement(100%);
+    top: 0;
+    left: 0;
+    background-color: rgb($color__dark, .8);
+  }
 
   &__title {
     z-index: z(content);
+    display: flex;
     flex-direction: column;
+    align-items: center;
+
+    &-heading {
+      text-align: center;
+    }
   }
 }

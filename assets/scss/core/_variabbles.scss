@@ -1,4 +1,17 @@
+$font__line-height: auto;
 $font__size: 18px;
+$font__weight: normal;
+$font__family: 'Lato';
+$font__style: sans-serif;
+$font__file-name: 'Lato-';
+$font__path: '~@/assets/fonts/#{$font__file-name}';
+$font__ext: (woff2, woff);
+$font__types: (
+                ('Regular', normal, normal),
+                ('Bold', bold, normal),
+                ('Black', 900, normal),
+                ('Light', 300, normal),
+);
 
 $header_height: 60px;
 $input__font-size: $font__size;

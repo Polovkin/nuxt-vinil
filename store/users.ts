@@ -17,7 +17,7 @@ export default class Users extends VuexModule {
     @Action({ rawError: true })
     async getUsers () {
       try {
-        const users = await axios.get('https://jsonplaceholder.typicode.com/users')
+        const users = await axios.get('http://localhost:3001/users')
         this.setUsers(users.data)
       } catch (e) {
         console.log(e)

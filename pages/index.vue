@@ -1,7 +1,6 @@
 <template>
   <div>
     <Main />
-    <ItemsBlock />
   </div>
 </template>
 

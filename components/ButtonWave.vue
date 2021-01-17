@@ -1,16 +1,16 @@
 <template>
   <button
-      ref="button"
-      class="material-btn"
-      :class="btnClass"
-      @mousedown="mousedown"
+    ref="button"
+    class="material-btn"
+    :class="btnClass"
+    @mousedown="mousedown"
   >
     <span
-        ref="wave"
-        class="wave"
+      ref="wave"
+      class="wave"
     />
     <b class="material-btn__text">
-      <slot/>
+      <slot />
     </b>
   </button>
 </template>

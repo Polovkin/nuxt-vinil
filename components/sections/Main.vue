@@ -1,13 +1,15 @@
 <template>
   <main class="main">
     <div class="main__title container">
-      <h1>
+      <h1 class="main__title-heading">
         Продажа виниловых <br> пластинок
       </h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporesse cillum dolore eu fugiat nulla eu fugiat nulla pariatur.
+
       </p>
-      <ButtonWave class="btn-primary">Заказать</ButtonWave>
+      <ButtonWave class="btn-primary">
+        Заказать
+      </ButtonWave>
     </div>
   </main>
 </template>
@@ -16,6 +18,7 @@
 import { Vue, Component } from 'nuxt-property-decorator'
 import Section from '~/components/layout/Section.vue'
 import ButtonWave from '~/components/ButtonWave.vue'
+import { usersModule } from '~/store'
 
 @Component({
   components: {
@@ -24,7 +27,13 @@ import ButtonWave from '~/components/ButtonWave.vue'
   }
 })
 export default class Main extends Vue {
-
+  // get usersData () {
+  //   return usersModule.users
+  // }
+  //
+  // async mounted () {
+  //   await usersModule.getUsers()
+  // }
 }
 </script>
 

@@ -4,7 +4,7 @@
 //Breakpoints
 $width__desktop-hd            : 1920px;
 
-$width__desktop-hd-min        : 1536px;
+$width__desktop-hd-min        : 1600px;
 $max-width__desktop-hd-min    : 1440px;
 
 $width__laptop                : 1366px;
@@ -42,9 +42,9 @@ $var-tablet__large            : ($width__laptop-min   $width__laptop) (height 80
 $var-tablet__small            : ($width__laptop-min   $width__laptop-min) (orientation landscape);
 
 $tablet__all                  :  $width__tablet-port   $width__laptop-min ;
-$tablet__landscape-large      :  $var-tablet__large,$var-tablet__small;
+$tablet__landscape-large      :  $var-tablet__large;
 $tablet__landscape            :  ($width__tablet-land, $width__laptop-min)  (orientation landscape);
-$tablet__portrait             :  ($width__tablet-port  $width__tablet-land) (orientation portrait);
+$tablet__portrait             :  screen ($width__tablet-port  $width__tablet-land) (orientation portrait);
 
 $phone__all                   : $width__min            ($width__tablet-port - 1);
 $phone__landscape             : $portrait__all         (max-height 450px);
