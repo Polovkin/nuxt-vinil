@@ -6,9 +6,18 @@
     size: cover;
     position: center;
   };
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  &__wrap {
+    height: 100%;
+    display: grid;
+    grid: {
+      template: {
+        areas: 'title form';
+        columns: 2fr 1fr;
+      }
+    };
+  }
+
 
   &:after {
     @include pseudoElement(100%);
@@ -16,14 +25,22 @@
     left: 0;
     background-color: rgb($color__dark, .8);
   }
+  &__form {
+    position: relative;
+    z-index: z(content);
+    grid-area: form;
+    align-self: center;
+  }
 
   &__title {
+    grid-area: title;
     z-index: z(content);
     display: flex;
     flex-direction: column;
     align-items: center;
 
     &-heading {
+      color: $color__font--secondary;
       text-align: center;
     }
   }
