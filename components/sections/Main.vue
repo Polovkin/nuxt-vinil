@@ -1,19 +1,17 @@
 <template>
-  <main class="main ">
-    <div class="main__wrap container">
-      <div class="main__title ">
-        <h1 class="main__title-heading">
-          Продажа виниловых <br> пластинок
-        </h1>
-        <ButtonWave class="btn-primary">
-          Заказать
-        </ButtonWave>
-      </div>
-      <div class="main__form">
-        <Form />
-      </div>
+  <div class="main__wrap container">
+    <div class="main__title ">
+      <h1 class="main__title-heading">
+        Продажа виниловых <br> пластинок
+      </h1>
+      <ButtonWave class="btn-primary">
+        Заказать
+      </ButtonWave>
     </div>
-  </main>
+    <div class="main__form">
+      <Form />
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
