@@ -27,7 +27,7 @@ body {
   margin: 0;
   padding: 0;
 
-  color: $color__font--primary;
+  color: $color__font--secondary;
   font-family: $font__family, $font__style;
   font-size: $font__size;
   font-weight: $font__weight;
@@ -106,7 +106,7 @@ textarea {
   width: 100%;
 }
 
-.container-my {
+.container {
   flex: 0 0 auto;
 
   width: 100%;
