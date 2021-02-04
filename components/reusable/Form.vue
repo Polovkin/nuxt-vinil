@@ -20,7 +20,7 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
 import axios from 'axios'
-import Input from '~/components/Input.vue'
+import Input from '@/components/reusable/Input.vue'
 import { formModule } from '~/store'
 
 @Component({
@@ -41,7 +41,6 @@ export default class Form extends Vue {
 
       form.append('name', this.name)
       form.append('message', this.message)
-
 
       formModule.FORM_SEND(form)
     } else {

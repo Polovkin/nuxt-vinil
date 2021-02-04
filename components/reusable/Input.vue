@@ -53,15 +53,15 @@
       )
     template(v-if="isRequired")
       span.input-custom__error-msg.animation-shake(v-if="!$v[validatorType].required && $v[validatorType].$dirty")
-        | Поле обязательно
+        | Field is required
     template(v-if="lengthValidatorTypes")
       span.input-custom__error-msg.animation-shake(v-if='!$v[validatorType].minLength')
-        | Не менее {{ $v[validatorType].$params.minLength.min }} символов.
+        | {{name}} must have at least {{ $v[validatorType].$params.minLength.min }} letters.
       span.input-custom__error-msg.animation-shake(v-if='!$v[validatorType].maxLength')
-        | Не более {{ $v[validatorType].$params.maxLength.max }} символов.
+        | {{name}} must have no more than {{ $v[validatorType].$params.maxLength.max }} letters.
     template(v-if="isEmail")
       span.input-custom__error-msg.animation-shake(v-if='!$v.email.email')
-        | Email неверный
+        | Email is not valid
 
 </template>
 
@@ -123,14 +123,6 @@ export default {
       type: String,
       default: ''
     },
-    minLen: {
-      type: Number,
-      default: 3
-    },
-    maxLen: {
-      type: Number,
-      default: 20
-    }
   },
   data () {
     return {
@@ -163,16 +155,6 @@ export default {
       } else {
         return !elem.minLength || !elem.maxLength
       }
-    },
-    touchState () {
-      return this.$store.state.form.touchFormState
-    }
-  },
-  watch: {
-    touchState (newValue) {
-      if (newValue) {
-        this.$v.$touch()
-      }
     }
   },
   mounted () {
@@ -197,12 +179,12 @@ export default {
 </script>
 <style lang="scss"
        scoped>
-$input__text: white;
+$input__text: black;
 $input__text-size: 16px;
 $input__placeholder: rgba($input__text, .3);
 $input__error: red;
 $input__valid: green;
-$input__border: white;
+$input__border: black;
 
 $input__height: 40px;
 
@@ -229,7 +211,6 @@ $input__height: 40px;
   padding: 0;
   margin: 0;
   outline: none;
-  background-color: transparent;
   border: {
     radius: 0;
     left: {

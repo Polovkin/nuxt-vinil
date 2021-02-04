@@ -9,8 +9,8 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
-import Logotype from '@/components/Logotype.vue'
-import Navbar from '@/components/Navbar.vue'
+import Logotype from '@/components/reusable/Logotype.vue'
+import Navbar from '@/components/layout/Navbar.vue'
 
 @Component({ components: { Logotype, Navbar } })
 export default class Header extends Vue {
