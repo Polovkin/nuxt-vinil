@@ -17,5 +17,5 @@ export default class Index extends Vue {
 }
 </script>
 <style lang="scss">
-
+@import "~@/assets/scss/pages/index.scss";
 </style>

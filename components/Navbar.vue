@@ -24,16 +24,16 @@ import { Vue, Component } from 'nuxt-property-decorator'
 export default class Navbar extends Vue {
   public navigation = [
     {
-      text: 'about',
+      text: 'home',
       link: '/'
     },
     {
-      text: 'about',
-      link: '/'
+      text: 'add',
+      link: '/add'
     },
     {
-      text: 'about',
-      link: '/'
+      text: 'tutorial',
+      link: '/tutorial'
     }
   ]
 }
