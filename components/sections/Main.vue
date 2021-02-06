@@ -6,9 +6,13 @@
           Продажа виниловых <br> пластинок
         </h1>
       </div>
-      <nuxt-link to="/test">
-        asd
-      </nuxt-link>
+      <ul>
+        <li v-for="user of usersData" :key="user.id">
+          <p>{{ user.id }}</p>
+          <p>{{ user.name }}</p>
+          <p>{{ user.email }}</p>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
@@ -30,7 +34,9 @@ import { formModule } from '~/store'
   }
 })
 export default class Main extends Vue {
-
+  get usersData () {
+    return formModule.users
+  }
 }
 </script>
 
