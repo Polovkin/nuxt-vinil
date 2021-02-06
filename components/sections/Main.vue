@@ -1,17 +1,13 @@
 <template>
-  <div class="main__wrap container">
-    <div class="main__title ">
-      <h1 class="main__title-heading">
-        Продажа виниловых <br> пластинок
-      </h1>
-      <ButtonWave class="btn-primary">
-        Заказать
-      </ButtonWave>
+  <section class="main">
+    <div class="main__container container">
+      <div class="main__title ">
+        <h1 class="main__title-heading">
+          Продажа виниловых <br> пластинок
+        </h1>
+      </div>
     </div>
-    <div class="main__form">
-      <Form />
-    </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
@@ -19,7 +15,6 @@ import { Vue, Component } from 'nuxt-property-decorator'
 import Section from '~/components/layout/Section.vue'
 import ButtonWave from '~/components/reusable/ButtonWave.vue'
 import Form from '~/components/reusable/Form.vue'
-import { formModule } from '~/store'
 
 @Component({
   components: {
@@ -29,17 +24,14 @@ import { formModule } from '~/store'
   }
 })
 export default class Main extends Vue {
-  // get usersData () {
-  //   return usersModule.users
-  // }
-  //
-  // async mounted () {
-  //   await usersModule.getUsers()
-  // }
+
 }
 </script>
 
 <style lang="scss">
 @import "./assets/scss/sections/main";
 
+button {
+  color: red;
+}
 </style>

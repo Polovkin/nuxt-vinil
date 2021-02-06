@@ -29,11 +29,11 @@ export default class Navbar extends Vue {
     },
     {
       text: 'add',
-      link: '/add'
+      link: '/'
     },
     {
       text: 'tutorial',
-      link: '/tutorial'
+      link: '/'
     }
   ]
 }

@@ -1,7 +1,5 @@
 <template>
-  <div class="container">
-    <Main/>
-  </div>
+    <Main />
 </template>
 
 <script lang="ts">
@@ -17,5 +15,5 @@ export default class Index extends Vue {
 }
 </script>
 <style lang="scss">
-@import "~@/assets/scss/pages/index.scss";
+@import '~@/assets/scss/pages/index.scss';
 </style>

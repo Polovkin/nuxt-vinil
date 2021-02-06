@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <main class="main">
+    <main>
       <nuxt />
     </main>
     <Footer />
@@ -22,8 +22,6 @@ export default {
 }
 </script>
 <style lang="scss">
-@import "~@/assets/scss/app.scss";
-.main {
-  padding-top: $header_height;
-}
+@import '~@/assets/scss/app.scss';
+
 </style>
