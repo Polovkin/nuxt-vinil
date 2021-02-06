@@ -21,7 +21,10 @@ export default {
 
   components: true,
 
-  buildModules: ['@nuxt/typescript-build'],
+  buildModules: [
+    '@nuxt/typescript-build',
+    '@aceforth/nuxt-optimized-images',
+  ],
 
   modules: [
     '@nuxtjs/axios',
@@ -56,7 +59,13 @@ export default {
       }),
       require('postcss-sort-media-queries')({
         sort: require('sort-css-media-queries')
-      }),
+      })
     ]
+  },
+  optimizedImages: {
+    inlineImageLimit: 1000,
+    handleImages: ['jpeg', 'png', 'svg', 'webp', 'jpg'],
+    optimizeImages: true,
+    optimizeImagesInDev: true,
   }
 }
