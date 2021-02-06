@@ -22,7 +22,7 @@ export default class Form extends VuexModule {
   }
 
   @Mutation
-  setUsers (users: never[]) {
+  setUsers (users: any) {
     this.users = users
   }
 
@@ -44,11 +44,12 @@ export default class Form extends VuexModule {
     }
   }
 
+
   @Action({ rawError: true })
-  async TEST_FETCH () {
+  async getUsers () {
     try {
-      const response = await axios.get('https://jsonplaceholder.typicode.com/users')
-      this.setUsers(response.data)
+      const users = await axios.get('https://jsonplaceholder.typicode.com/users')
+      this.setUsers(users.data)
     } catch (e) {
       console.log(e)
       throw e
