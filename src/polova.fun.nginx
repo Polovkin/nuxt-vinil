@@ -1,0 +1,30 @@
+server {
+    charset utf-8;
+    expires epoch;
+    proxy_cache off;
+    root /var/www/polova.fun/frontend;
+    client_max_body_size 512M;
+    error_log /var/www/polova.fun/nginx/logs/fontend-errors.log;
+    error_page 404 /404.html;
+    index index.html;
+    server_name polova.fun;
+    location ~ \.(avi|bmp|png|css|doc|gif|htm|html|ico|jpeg|jpg|js|mp3|swf|txt|xls|zip|wml|wmlc|wmls|wmlsc|wbmp|fla|flv|xml|mpg|mpeg|pdf|woff|eot|otf|svg|ttf|woff2|docx|xlsx|ppt|pptx|webp|mp4)$ {
+        try_files $uri = 404;
+    }
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
+
+server {
+
+    root /var/www/polova.fun/backend;
+    index index.html;
+
+    server_name admin.polova.fun;
+    location / {
+        proxy_pass http://admin.polova.fun:3001;
+        proxy_set_header Host $host;
+    }
+}

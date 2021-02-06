@@ -7,7 +7,7 @@
         </h1>
       </div>
       <ul>
-        <li v-for="user of users" :key="user.id">
+        <li v-for="user of usersData" :key="user.id">
           <p>{{ user.id }}</p>
           <p>{{ user.name }}</p>
           <p>{{ user.email }}</p>
@@ -34,15 +34,18 @@ import { formModule } from '~/store'
   }
 })
 export default class Main extends Vue {
-  async fetch ({ store }: { store: any }) {
+  async fetch (store:any) {
     if (store.getters['form/GET_USERS'].length === 0) {
-      await store.dispatch('form/TEST_FETCH')
-      console.log(1)
+      await store.dispatch('form/getUsers')
     }
   }
 
-  get users () {
+  get usersData () {
     return formModule.users
+  }
+
+  async created () {
+    await formModule.getUsers()
   }
 }
 </script>

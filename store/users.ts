@@ -7,25 +7,25 @@ import axios from 'axios'
   namespaced: true
 })
 export default class Users extends VuexModule {
-    users = []
+  users = []
 
-    @Mutation
-    setUsers (users: never[]) {
-      this.users = users
-    }
+  @Mutation
+  setUsers (users: any) {
+    this.users = users
+  }
 
-    @Action({ rawError: true })
-    async getUsers () {
-      try {
-        const users = await axios.get('http://localhost:3001/users')
-        this.setUsers(users.data)
-      } catch (e) {
-        console.log(e)
-        throw e
-      }
+  @Action({ rawError: true })
+  async getUsers () {
+    try {
+      const users = await axios.get('https://jsonplaceholder.typicode.com/users')
+      this.setUsers(users.data)
+    } catch (e) {
+      console.log(e)
+      throw e
     }
+  }
 
-    get GET_USERS () {
-      return this.users
-    }
+  get GET_USERS () {
+    return this.users
+  }
 }

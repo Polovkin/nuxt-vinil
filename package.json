@@ -8,6 +8,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
+
   "dependencies": {
     "@nuxt/babel-preset-app-edge": "^2.15.0-26817165.ac762299",
     "@nuxt/typescript-runtime": "^2.0.0",
@@ -62,6 +63,7 @@
     "webp-loader": "^0.6.0"
   },
   "config": {
+
     "commitizen": {
       "path": "node_modules/cz-customizable"
     },
