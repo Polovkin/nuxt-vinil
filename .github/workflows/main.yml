@@ -33,5 +33,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            git pull
+            cd /var/www/polova.fun/frontend/ git pull
             pm2 restart nuxt-vinyl
