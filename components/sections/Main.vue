@@ -10,6 +10,8 @@
         <li v-for="user of usersData" :key="user.id">
           <p><b>{{ user.name }}</b></p>
           <p><b>{{ user.id }}</b></p>
+          <p><b>{{ user.id }}</b></p>
+          <p><b>{{ user.id }}</b></p>
           <p> <small>{{ user.email }}</small></p>
         </li>
       </ul>
