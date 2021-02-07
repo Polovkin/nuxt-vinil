@@ -53,15 +53,15 @@
       )
     template(v-if="isRequired")
       span.input-custom__error-msg.animation-shake(v-if="!$v[validatorType].required && $v[validatorType].$dirty")
-        | Field is required
+        | Поле обязательно
     template(v-if="lengthValidatorTypes")
       span.input-custom__error-msg.animation-shake(v-if='!$v[validatorType].minLength')
-        | {{name}} must have at least {{ $v[validatorType].$params.minLength.min }} letters.
+        | Должно быть не меньше {{ $v[validatorType].$params.minLength.min }} символов.
       span.input-custom__error-msg.animation-shake(v-if='!$v[validatorType].maxLength')
-        | {{name}} must have no more than {{ $v[validatorType].$params.maxLength.max }} letters.
+        | Должно быть не больше {{ $v[validatorType].$params.maxLength.max }} символов.
     template(v-if="isEmail")
       span.input-custom__error-msg.animation-shake(v-if='!$v.email.email')
-        | Email is not valid
+        | Неверный Email
 
 </template>
 

@@ -28,18 +28,20 @@
       is-textarea
     )
     p(v-if="formSend") Заказ отправлен
-    button(type="submit") Отправить
+    button-wave(type="submit") Отправить
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
 import axios from 'axios'
 import Input from '@/components/reusable/Input.vue'
+import ButtonWave from '@/components/reusable/ButtonWave.vue'
 import { formModule } from '~/store'
 
 @Component({
   components: {
-    Input
+    Input,
+    ButtonWave
   },
   mounted () {
 

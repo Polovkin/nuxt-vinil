@@ -1,0 +1,15 @@
+.main-form {
+
+  &__wrap {
+    display: grid;
+    grid: {
+      template: {
+        columns: repeat(2, 1fr);
+      };
+    }
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+  }
+}

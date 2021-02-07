@@ -1,15 +1,17 @@
 <template>
-  <Main />
-
+  <div class="index">
+    <Main />
+    <MainForm/>
+  </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
 import Main from '~/components/sections/Main.vue'
-import ItemsBlock from '~/components/sections/ItemsBlock.vue'
+import MainForm from '~/components/sections/MainForm.vue'
 
 @Component({
-  components: { Main, ItemsBlock }
+  components: { Main, MainForm }
 })
 export default class Index extends Vue {
   async fetch ({ store }:any) {

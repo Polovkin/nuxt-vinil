@@ -60,26 +60,67 @@ export default {
 <style scoped
        lang="scss"
 >
-$btn_text-color: $color__font--primary;
+$btn_text-color: $color__font--secondary;
 $btn_bg-color: $color__primary;
 $btn_wave-color: lighten($btn_bg-color, 10%);
 
+@keyframes wave-animation {
+
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-animation {
+
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+
+  51% {
+    transform: translate(-100%);
+  }
+
+  100% {
+    transform: translate(0%);
+    opacity: 1;
+  }
+}
+
 .material-btn {
-  padding: 10px 20px;
-  border-radius: 15px;
   position: relative;
+
   overflow: hidden;
-  font-weight: bold;
-  cursor: pointer;
-  color: $btn_text-color;
+
+  padding: 10px 20px;
+
+  border-radius: 10px;
+
   background-color: $btn_bg-color;
-  text-transform: uppercase;
+
+  color: $btn_text-color;
+  text-transform: lowercase;
+
+  cursor: pointer;
 
   &--active .wave {
     animation: wave-animation .8s;
   }
 
   &:active {
+
     .material-btn__text {
       top: 1px;
     }
@@ -100,38 +141,11 @@ $btn_wave-color: lighten($btn_bg-color, 10%);
   height: 15px;
 
   border-radius: 100%;
-  transform: scale(0);
+
   background: $btn_wave-color;
 
-}
+  transform: scale(0);
 
-@keyframes wave-animation {
-  from {
-    opacity: 1;
-    transform: scale(0);
-  }
-  to {
-    transform: scale(10);
-    opacity: 0;
-  }
-}
-
-@keyframes slide-animation {
-  0% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-  50% {
-    transform: translateX(150%);
-    opacity: 0;
-  }
-  51% {
-    transform: translate(-100%);
-  }
-  100% {
-    transform: translate(0%);
-    opacity: 1;
-  }
 }
 
 </style>

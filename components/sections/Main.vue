@@ -14,7 +14,6 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
-import Section from '~/components/layout/Section.vue'
 import ButtonWave from '~/components/reusable/ButtonWave.vue'
 import Form from '~/components/reusable/Form.vue'
 
@@ -23,7 +22,6 @@ import { formModule } from '~/store'
 @Component({
 
   components: {
-    Section,
     ButtonWave,
     Form
   }

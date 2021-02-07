@@ -2,7 +2,7 @@
   $main_bg_color: #15141a;
   position: relative;
 
-  height: 70vh;
+  min-height: 100vh;
 
   padding-top: $header_height;
 
@@ -21,6 +21,7 @@
 
     width: 35vw;
     height: 100%;
+
     background: linear-gradient(90deg, rgba(21, 20, 26, 1) 30%, rgba(255, 255, 255, 0) 100%);
 
   }
@@ -33,19 +34,23 @@
   }
 
   &__title {
-    padding-top: 100px;
     position: relative;
     z-index: z(content);
+
+    padding-top: 100px;
+
     &-heading {
-      transform: translateX(-50px);
-      opacity: 0;
-      transition: all ease-in-out 2s;
 
 
 
       max-width: 700px;
 
       color: $color__font--secondary;
+
+      transform: translateX(-50px);
+      opacity: 0;
+
+      transition: all ease-in-out 2s;
       font: {
         size: 70px;
         weight: 900;
@@ -54,9 +59,11 @@
     }
 
     &-text {
-      color:rgba($color__font--secondary,.7) ;
-      margin-top: 40px;
       max-width: 300px;
+
+      margin-top: 40px;
+
+      color:rgba($color__font--secondary,.7) ;
     }
   }
 }
