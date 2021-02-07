@@ -2,21 +2,21 @@ import { Store } from 'vuex'
 import { getModule } from 'vuex-module-decorators'
 import Form from '~/store/form'
 import HeaderStore from '~/store/header'
-import Tutorials from '~/store/tutorials'
+import Users from '~/store/users'
 
 let formModule: Form
 let headerModule: HeaderStore
-let tutorialsModule: Tutorials
+let usersModule: Users
 
 function initialiseStores (store: Store<any>): void {
   formModule = getModule(Form, store)
   headerModule = getModule(HeaderStore, store)
-  tutorialsModule = getModule(Tutorials, store)
+  usersModule = getModule(Users, store)
 }
 
 export {
   initialiseStores,
   formModule,
-  tutorialsModule,
+  usersModule,
   headerModule
 }

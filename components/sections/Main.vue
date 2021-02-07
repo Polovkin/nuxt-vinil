@@ -6,6 +6,13 @@
           Продажа виниловых <br> пластинок
         </h1>
       </div>
+      <ul>
+        <li v-for="user of usersData" :key="user.id">
+          <p>{{ user.id }}</p>
+          <p>{{ user.name }}</p>
+          <p>{{ user.email }}</p>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
@@ -16,7 +23,10 @@ import Section from '~/components/layout/Section.vue'
 import ButtonWave from '~/components/reusable/ButtonWave.vue'
 import Form from '~/components/reusable/Form.vue'
 
+import { formModule } from '~/store'
+
 @Component({
+
   components: {
     Section,
     ButtonWave,
@@ -24,12 +34,14 @@ import Form from '~/components/reusable/Form.vue'
   }
 })
 export default class Main extends Vue {
-
+  get usersData () {
+    return formModule.users
+  }
 }
 </script>
 
 <style lang="scss">
-@import "./assets/scss/sections/main";
+@import './assets/scss/sections/main';
 
 button {
   color: red;

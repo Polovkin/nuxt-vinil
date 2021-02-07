@@ -9,14 +9,21 @@ import axios from 'axios'
 export default class Form extends VuexModule {
   touchFormState = false
   success = false
+  users=[]
 
   @Mutation
   FORM_TOUCH_STATE (): void {
     this.touchFormState = true
   }
+
   @Mutation
   SUCCESS_SEND (): void {
     this.success = !this.success
+  }
+
+  @Mutation
+  setUsers (users: any) {
+    this.users = users
   }
 
   @Action({ rawError: true })
@@ -35,5 +42,21 @@ export default class Form extends VuexModule {
       console.log(e)
       throw e
     }
+  }
+
+
+  @Action({ rawError: true })
+  async getUsers () {
+    try {
+      const users = await axios.get('https://jsonplaceholder.typicode.com/users')
+      this.setUsers(users.data)
+    } catch (e) {
+      console.log(e)
+      throw e
+    }
+  }
+
+  get GET_USERS () {
+    return this.users
   }
 }

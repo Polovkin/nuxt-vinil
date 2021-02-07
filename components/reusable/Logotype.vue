@@ -4,7 +4,7 @@
     class="logotype"
   >
     <img
-      src="/assets/img/icons/logo.svg"
+      src="~/assets/img/icons/logo.svg?inline"
       alt="logotype"
     >
   </nuxt-link>
@@ -15,7 +15,9 @@ import { Vue, Component } from 'nuxt-property-decorator'
 
 @Component({})
 export default class Logotype extends Vue {
-
+  mounted () {
+    console.log('test')
+  }
 }
 </script>
 
@@ -23,10 +25,11 @@ export default class Logotype extends Vue {
        scoped
 >
 .logotype {
-  display: flex;
+  @include size(40px);
   align-items: center;
   justify-content: center;
-  @include size(40px);
+
+  display: flex;
 
   img {
 
