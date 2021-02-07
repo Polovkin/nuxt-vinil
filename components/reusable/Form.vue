@@ -43,6 +43,7 @@ import { formModule } from '~/store'
   },
   mounted () {
 
+
   }
 })
 export default class Form extends Vue {
