@@ -26,8 +26,8 @@ jobs:
       #- run: npm run build
       - name: Deploy to Staging server
         uses: easingthemes/ssh-deploy@v2.1.5
-         env:
-          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          SOURCE: "dist/"
-          REMOTE_HOST: polova.fun
-          REMOTE_USER: root
+        env:
+            SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+            SOURCE: "dist/"
+            REMOTE_HOST: polova.fun
+            REMOTE_USER: root
