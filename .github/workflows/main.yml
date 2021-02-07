@@ -22,8 +22,20 @@ jobs:
       - run: echo "${{ secrets.SSH_KEY }}" > "$HOME/.ssh/key"
       - run: chmod 600 "$HOME/.ssh/key"
       # Build 
-      - run: npm ci
-      - run: npm run build
+      - name: Run CI 
+        run: npm ci
+      - name: Run build    
+        run: npm run build
       # Deploy
-      - run: rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete .nuxt root@185.181.165.35:/var/www/polova.fun/frontend
-      - run: pm2 restart 1
+      - name: Deploy NodeJS app 
+        run: rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete .nuxt root@185.181.165.35:/var/www/polova.fun/frontend
+      - name: Restart PM2 & git pull
+        uses: appleboy/ssh-action@v0.1.2
+        with:
+          host: ${{secrets.HOST}}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /var/www/polova.fun/frontend/ 
+            git pull
+            pm2 restart nuxt-vinyl
