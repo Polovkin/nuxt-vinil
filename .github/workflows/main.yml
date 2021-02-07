@@ -17,20 +17,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       # Setup key
-      #- run: set -eu
-      #- run: mkdir "$HOME/.ssh"
-      #- run: echo "${{ secrets.SSH_KEY }}" > "$HOME/.ssh/key"
-      #- run: chmod 600 "$HOME/.ssh/key"
+      - run: set -eu
+      - run: mkdir "$HOME/.ssh"
+      - run: echo "${{ secrets.PRIVATE_KEY }}" > "$HOME/.ssh/key"
+      - run: chmod 600 "$HOME/.ssh/key"
       # Build 
       #- run: npm ci
-      #- run: npm run build
-      #Deploy  
-      - name: Deploy to Staging server
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          source: "static"
-          target: "test"
+      - run: npm run build
+      # Deploy
+      - run: rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete .nuxt root@185.181.165.35:/var/www/test
