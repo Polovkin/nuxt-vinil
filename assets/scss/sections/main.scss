@@ -6,7 +6,7 @@
 
   padding-top: $header_height;
 
-  background-color: red;
+  //background-color: red;
   background: {
     image: url('#{$icon_path}/logo.svg?inline');
   };
@@ -14,6 +14,6 @@
   &__container {
     min-height: 100%;
 
-    background-color: green;
+    background-color: #fff;
   }
 }
