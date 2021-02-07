@@ -17,15 +17,15 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       # Setup key
-      #- run: set -eu
-      #- run: mkdir "$HOME/.ssh"
-      #- run: echo "${{ secrets.SSH_KEY }}" > "$HOME/.ssh/key"
-      #- run: chmod 600 "$HOME/.ssh/key"
+      - run: set -eu
+      - run: mkdir "$HOME/.ssh"
+      - run: echo "${{ secrets.SSH_KEY }}" > "$HOME/.ssh/key"
+      - run: chmod 600 "$HOME/.ssh/key"
       # Build 
-      #- run: npm ci
-      #- run: npm run build
+      - run: npm ci
+      - run: npm run build
       # Deploy
-      #- run: rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete .nuxt root@185.181.165.35:/var/www/polova.fun/frontend
+      - run: rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete .nuxt root@185.181.165.35:/var/www/polova.fun/frontend
       - name: Deploy NodeJS app
         uses: appleboy/ssh-action@v0.1.2
         with:
@@ -33,7 +33,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            npm ci
-            npm run build
-            rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete .nuxt root@185.181.165.35:/var/www/polova.fun/frontend
+            git pull
             pm2 restart nuxt-vinyl
