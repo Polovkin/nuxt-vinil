@@ -17,17 +17,17 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       # Setup key
-      - run: set -eu
-      - run: mkdir "$HOME/.ssh"
-      - run: echo "${{ secrets.PRIVATE_KEY }}" > "$HOME/.ssh/key"
-      - run: chmod 600 "$HOME/.ssh/key"
+      #- run: set -eu
+      #- run: mkdir "$HOME/.ssh"
+      #- run: echo "${{ secrets.SSH_KEY }}" > "$HOME/.ssh/key"
+      #- run: chmod 600 "$HOME/.ssh/key"
       # Build 
       #- run: npm ci
       #- run: npm run build
       - name: Deploy to Staging server
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
-            SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+            SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
             SOURCE: "dist/"
             REMOTE_HOST: polova.fun
             REMOTE_USER: root
