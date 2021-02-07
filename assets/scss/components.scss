@@ -111,3 +111,16 @@ form {
     resize: none;
   }
 }
+
+.section {
+  padding: 80px 0;
+  @include breakpoint($desktop__laptop) {
+    padding: 60px 0;
+  }
+  @include breakpoint ($tablet__all) {
+    padding: 40px 0;
+  }
+  @include breakpoint ($phone__all) {
+    padding: 20px 0;
+  }
+}

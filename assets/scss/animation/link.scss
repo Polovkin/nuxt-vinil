@@ -1,0 +1,28 @@
+.animate-link {
+  position: relative;
+
+  &:hover {
+    &:after {
+      max-width: 100%;
+    }
+  }
+
+  &:after {
+    @include pseudoElement(100%);
+    bottom: -3px;
+
+    max-width: 0;
+    height: 1px;
+
+    background-color: $color__light;
+
+    transition: all ease-in $animation-medium;
+  }
+
+  @include ie11() {
+    &:hover {
+      text-decoration: underline;
+    }
+
+  }
+}

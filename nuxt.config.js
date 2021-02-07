@@ -17,13 +17,13 @@ export default {
   styleResources: {
     scss: '@/assets/scss/core/_global.scss'
   },
-  plugins: [],
+  plugins: [    '~/plugins/viewport.js'],
 
   components: true,
 
   buildModules: [
     '@nuxt/typescript-build',
-    '@aceforth/nuxt-optimized-images',
+    '@aceforth/nuxt-optimized-images'
   ],
 
   modules: [
@@ -66,6 +66,11 @@ export default {
     inlineImageLimit: 1000,
     handleImages: ['jpeg', 'png', 'svg', 'webp', 'jpg'],
     optimizeImages: true,
-    optimizeImagesInDev: true,
-  }
+    optimizeImagesInDev: true
+  },
+  pwa: {
+    icon: {
+
+    }
+  },
 }

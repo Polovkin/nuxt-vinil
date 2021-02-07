@@ -25,11 +25,15 @@ export default class Logotype extends Vue {
        scoped
 >
 .logotype {
+
   @include size(40px);
   align-items: center;
   justify-content: center;
-
   display: flex;
+
+  &:hover {
+
+  }
 
   img {
 

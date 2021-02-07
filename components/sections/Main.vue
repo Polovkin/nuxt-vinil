@@ -1,10 +1,12 @@
 <template>
-  <section class="main">
+  <section v-in-viewport.once class="main">
+    <div class="main__bg"/>
     <div class="main__container container">
       <div class="main__title ">
         <h1 class="main__title-heading">
-          Продажа виниловых <br> пластинок
+          Виниловые пластинки под заказ
         </h1>
+        <p class="main__title-text">Заказ и доставка любых пластинок</p>
       </div>
     </div>
   </section>

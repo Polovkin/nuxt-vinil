@@ -8,7 +8,7 @@
       >
         <nuxt-link
           :to="links.link"
-          class="navigation__link"
+          class="navigation__link animate-link"
         >
           {{ links.text }}
         </nuxt-link>
@@ -24,16 +24,12 @@ import { Vue, Component } from 'nuxt-property-decorator'
 export default class Navbar extends Vue {
   public navigation = [
     {
-      text: 'home',
-      link: '/'
+      text: 'заказать',
+      link: '#order'
     },
     {
-      text: 'test',
-      link: '/test'
-    },
-    {
-      text: 'tutorial',
-      link: '/'
+      text: 'контакты',
+      link: '#contacts'
     }
   ]
 }
@@ -50,6 +46,11 @@ export default class Navbar extends Vue {
 
   &__item {
     margin: 0 1rem;
+  }
+  &__link {
+    color: $color__font--secondary;
+    text-transform: uppercase;
+    font-size: 13px;
   }
 }
 </style>

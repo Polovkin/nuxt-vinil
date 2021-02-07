@@ -5,7 +5,8 @@
   width: 100%;
   height: $header_height;
 
-  background-color: $color__primary;
+
+  color: $color__font--secondary;
 
   &__wrap {
     align-items: center;
@@ -13,5 +14,8 @@
 
     display: flex;
     height: $header_height;
+  }
+  &__navbar {
+
   }
 }
