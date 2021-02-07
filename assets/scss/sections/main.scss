@@ -8,12 +8,10 @@
 
   //background-color: red;
   background: {
-    image: url('#{$icon_path}/logo.svg?inline');
+    image: url('#{$img_path}/bg.jpg');
   };
 
   &__container {
     min-height: 100%;
-
-    background-color: #190126;
   }
 }
