@@ -33,4 +33,4 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           source: ".nuxt"
-          target: "/test"
+          target: "test"
