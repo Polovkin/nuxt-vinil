@@ -1,18 +1,28 @@
+
 $font__line-height: auto;
 $font__size: 18px;
 $font__weight: normal;
-$font__family: 'Gilroy';
+$font__family: 'Montserrat';
 $font__style: sans-serif;
 $font__file-name: '#{$font__family}-';
 $font__path: '~@/assets/fonts/#{$font__file-name}';
 $font__ext: (woff2, woff);
 $font__types: (
-  ('Black', 900, normal),
   ('Bold', bold, normal),
   ('Medium', 500, normal),
   ('Regular', normal, normal),
-  ('Light', 300, normal),
 );
+
+
+$font__family_title:'DrukCyr';
+$font__file-name_title: '#{$font__family_title}-';
+$font__path_title: '~@/assets/fonts/#{$font__file-name_title}';
+$font__types_title: (
+  ('Bold', bold, normal),
+  ('Heavy', 900, normal),
+  ('Medium', 500, normal),
+);
+
 
 $header_height: 60px;
 $input__font-size: $font__size;

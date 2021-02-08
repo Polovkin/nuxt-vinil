@@ -49,8 +49,8 @@ export default class Navbar extends Vue {
   }
   &__link {
     color: $color__font--secondary;
-    text-transform: uppercase;
-    font-size: 13px;
+    //text-transform: uppercase;
+   // font-size: 13px;
   }
 }
 </style>
