@@ -1,8 +1,10 @@
 .animate-link {
   position: relative;
-
+  transition: all ease-in $animation-medium;
   &:hover {
+    color: $color__primary;
     &:after {
+      background-color: $color__primary;
       max-width: 100%;
     }
   }
@@ -16,7 +18,7 @@
 
     background-color: $color__light;
 
-    transition: all ease-in $animation-medium;
+   transition: all ease-in $animation-medium;
   }
 
   @include ie11() {

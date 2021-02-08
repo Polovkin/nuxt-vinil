@@ -3,6 +3,7 @@
     <div class="header__wrap container">
       <Logotype class="header__logotype"/>
       <Navbar class="header__navbar"/>
+      <div></div>
     </div>
   </header>
 </template>

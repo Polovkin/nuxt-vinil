@@ -3,10 +3,15 @@
   z-index: z(header);
 
   width: 100%;
-  height: $header_height;
 
+  padding: 15px 0;
+
+  border-bottom: 2px solid $color__gray;
 
   color: $color__font--secondary;
+  background: {
+    color: $color__secondary;
+  };
 
   &__wrap {
     align-items: center;
@@ -15,6 +20,7 @@
     display: flex;
     height: $header_height;
   }
+
   &__navbar {
 
   }

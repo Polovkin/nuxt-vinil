@@ -24,11 +24,11 @@ import { Vue, Component } from 'nuxt-property-decorator'
 export default class Navbar extends Vue {
   public navigation = [
     {
-      text: 'заказать',
+      text: 'Магазин',
       link: '#order'
     },
     {
-      text: 'контакты',
+      text: 'Контакты',
       link: '#contacts'
     }
   ]
@@ -39,18 +39,22 @@ export default class Navbar extends Vue {
        lang="scss"
 >
 .navigation {
+
   &__List {
-    display: flex;
     align-items: center;
+
+    display: flex;
   }
 
   &__item {
     margin: 0 1rem;
   }
+
   &__link {
     color: $color__font--secondary;
-    //text-transform: uppercase;
-   // font-size: 13px;
+    font-family: DrukCyr,serif;
+    font-size: 26px;
+    letter-spacing: 2px;
   }
 }
 </style>
