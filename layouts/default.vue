@@ -1,10 +1,10 @@
 <template>
   <div>
-    <Header/>
+    <Header />
     <main>
-      <nuxt/>
+      <nuxt />
     </main>
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
@@ -44,7 +44,6 @@ body {
       }
     }
   }
-
 
 }
 </style>
