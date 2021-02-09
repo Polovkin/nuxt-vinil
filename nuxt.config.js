@@ -5,16 +5,25 @@ export default {
     title: 'Vinyl Shop',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: ''
+      }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      }
     ]
   },
-  css: [
-
-  ],
+  css: [],
   styleResources: {
     scss: '@/assets/scss/core/_global.scss'
   },
@@ -23,18 +32,40 @@ export default {
   components: true,
 
   buildModules: [
-    '@nuxtjs/device',
+    // @TODO: set IOS tablet device type
+    //'@nuxtjs/device',
     '@nuxt/typescript-build',
-    '@aceforth/nuxt-optimized-images',
+    '@aceforth/nuxt-optimized-images'
 
   ],
 
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/robots',
+    ['nuxt-social-meta',
+      {
+        url: 'Site url',
+        title: 'Title',
+        site_name: 'Site name',
+        description: 'Site description',
+        img: 'Link to image in static folder',
+        locale: 'en_US',
+        twitter: '@user',
+        twitter_card: 'summary_large_image',
+        themeColor: '#theme-color'
+      }]
+    // @TODO: set sitemap
+    // '@nuxtjs/sitemap'
   ],
-
+  robots: {
+    UserAgent: '*',
+    Disallow: '/'
+  },
+  sitemap: {
+    // options
+  },
   babel: {
     presets (env, [preset, options]) {
       return [
@@ -72,8 +103,6 @@ export default {
     optimizeImagesInDev: true
   },
   pwa: {
-    icon: {
-
-    }
+    icon: {}
   }
 }
