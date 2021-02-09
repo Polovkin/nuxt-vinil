@@ -1,7 +1,8 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
+
   head: {
-    title: 'NuxtTemplate',
+    title: 'Vinyl Shop',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -17,13 +18,14 @@ export default {
   styleResources: {
     scss: '@/assets/scss/core/_global.scss'
   },
-  plugins: [    '~/plugins/viewport.js'],
+  plugins: ['~/plugins/viewport.js'],
 
   components: true,
 
   buildModules: [
     '@nuxt/typescript-build',
-    '@aceforth/nuxt-optimized-images'
+    '@aceforth/nuxt-optimized-images',
+    '@nuxtjs/device',
   ],
 
   modules: [
@@ -72,5 +74,5 @@ export default {
     icon: {
 
     }
-  },
+  }
 }
