@@ -14,13 +14,13 @@
         <h1 class="main__title-heading ">
           Магазин виниловых пластинок
         </h1>
-        <p
+<!--        <p
           v-for="(device,key,index) of $device"
           :key="index"
           class="main__title-text"
         >
           <b> {{ key }}</b>: {{ device }}
-        </p>
+        </p>-->
         <p class="main__title-text">
           Заказ и доставка любых пластинок
         </p>

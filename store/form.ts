@@ -7,9 +7,8 @@ import axios from 'axios'
   namespaced: true
 })
 export default class Form extends VuexModule {
-  touchFormState = false
-  success = false
-  users=[]
+  touchFormState: boolean = false
+  success: boolean = false
 
   @Mutation
   FORM_TOUCH_STATE (): void {
@@ -19,11 +18,6 @@ export default class Form extends VuexModule {
   @Mutation
   SUCCESS_SEND (): void {
     this.success = !this.success
-  }
-
-  @Mutation
-  setUsers (users: any) {
-    this.users = users
   }
 
   @Action({ rawError: true })
@@ -36,7 +30,7 @@ export default class Form extends VuexModule {
       if (response.statusText === 'OK') {
         this.SUCCESS_SEND()
       } else {
-        console.log('send error')
+        console.log('send form error')
       }
     } catch (e) {
       console.log(e)
@@ -44,6 +38,13 @@ export default class Form extends VuexModule {
     }
   }
 
+  // ASYNC FETCH TEST
+  users = []
+
+  @Mutation
+  setUsers (users: any) {
+    this.users = users
+  }
 
   @Action({ rawError: true })
   async getUsers () {

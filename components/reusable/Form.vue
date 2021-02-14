@@ -45,7 +45,6 @@ import { formModule } from '~/store'
   },
   mounted () {
 
-
   }
 })
 export default class Form extends Vue {
@@ -74,8 +73,6 @@ export default class Form extends Vue {
       formModule.FORM_TOUCH_STATE()
     }
   }
-
-
 }
 </script>
 
