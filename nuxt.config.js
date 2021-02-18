@@ -34,7 +34,6 @@ export default {
   buildModules: [
     // @TODO: set IOS tablet device type
     //'@nuxtjs/device',
-    '@nuxt/typescript-build',
     '@aceforth/nuxt-optimized-images'
 
   ],
@@ -76,9 +75,6 @@ export default {
   axios: {},
 
   build: {
-    transpile: [
-      'vuex-module-decorators'
-    ],
     // transpile: ['vuetify'] //IE11
     postcss: [
       require('autoprefixer')({}),

@@ -1,21 +1,18 @@
 <template>
   <div>
-    <Header />
-    <main>
+
+
       <nuxt />
-    </main>
-    <Footer />
+
+
   </div>
 </template>
 
-<script lang="ts">
-import Header from '~/components/layout/Header.vue'
-import Footer from '~/components/layout/Footer.vue'
+<script >
+
 
 export default {
   components: {
-    Footer,
-    Header
   },
   data () {
     return {

@@ -10,30 +10,23 @@
   },
   "dependencies": {
     "@nuxt/babel-preset-app-edge": "^2.15.0-26817165.ac762299",
-    "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/pwa": "^3.0.2",
     "@nuxtjs/robots": "^2.4.2",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/style-resources": "^1.0.0",
-    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.14.5",
-    "nuxt-property-decorator": "^2.8.8",
     "nuxt-social-meta": "0.0.5",
     "vue": "^2.6.12",
-    "vue-class-component": "^7.2.6",
     "vuelidate": "^0.7.6"
   },
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "^1.4.0",
     "@commitlint/cli": "^11.0.0",
-    "@nuxt/types": "^2.14.12",
-    "@nuxt/typescript-build": "^2.0.3",
     "@nuxtjs/device": "^1.2.7",
     "@nuxtjs/eslint-config": "^5.0.0",
-    "@nuxtjs/eslint-config-typescript": "^5.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/svg": "^0.1.12",
     "autoprefixer": "^9.8.6",
@@ -62,7 +55,6 @@
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0",
     "vue-in-viewport-directive": "^2.0.2",
-    "vuex-module-decorators": "^1.0.1",
     "webp-loader": "^0.6.0"
   },
   "config": {
