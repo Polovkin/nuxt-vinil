@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header header--animate-show">
     <div class="header__wrap container">
       <Logotype class="header__logotype" />
       <Navbar class="header__navbar" />

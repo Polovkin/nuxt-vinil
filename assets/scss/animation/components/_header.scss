@@ -1,0 +1,17 @@
+.header--animate-show {
+  animation: {
+    name: header-show;
+    duration: $main_page_timing;
+    fill-mode: forwards;
+    timing-function: ease-out;
+  };
+}
+
+@keyframes header-show {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

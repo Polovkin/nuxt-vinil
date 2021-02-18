@@ -11,7 +11,7 @@
     </div>
     <div class="main__container container">
       <div class="main__title ">
-        <h1 class="main__title-heading ">
+        <h1 class="main__title-heading title--animate-move-x">
           Магазин виниловых пластинок
         </h1>
         <!--        <p

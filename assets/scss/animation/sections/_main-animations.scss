@@ -1,0 +1,19 @@
+.title--animate-move-x {
+  animation: {
+    name: title-move-x;
+    duration: $main_page_timing;
+    fill-mode: forwards;
+    timing-function: ease-out;
+  };
+}
+
+@keyframes title-move-x {
+  0% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

@@ -1,6 +1,6 @@
 <template>
   <div :class="pageClass">
-    <h1>Test</h1>
+    <MainIndex />
   </div>
 </template>
 
@@ -10,10 +10,12 @@ export default {
   data () {
     return {
       pageClass: this.$route.name
+
     }
   }
 }
 </script>
 <style lang="scss">
 @import '~@/assets/scss/pages/index.scss';
+
 </style>

@@ -10,13 +10,13 @@ $ring-color                : rebeccapurple;
 $ring-animation-duration   : 1.8s;
 $ring-weight               : 5px;
 
-@import 'link';
+//timings
+$main_page_timing: 1.5s;
 
-@import 'keyframes';
+@import 'components/link';
+@import 'components/header';
+@import 'sections/main-animations';
 
-.in-viewport {
-  .main__title-heading {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+
+
+
