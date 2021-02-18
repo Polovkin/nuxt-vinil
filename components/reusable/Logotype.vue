@@ -10,14 +10,10 @@
   </nuxt-link>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from 'nuxt-property-decorator'
+<script >
 
-@Component({})
-export default class Logotype extends Vue {
-  mounted () {
-    console.log('test')
-  }
+export default {
+  name: 'Logotype'
 }
 </script>
 

@@ -1,14 +1,17 @@
 <template>
-  <div class="index">
-
+  <div :class="pageClass">
+    <h1>Test</h1>
   </div>
 </template>
 
-<script >
+<script>
 
-
-export default  {
-
+export default {
+  data () {
+    return {
+      pageClass: this.$route.name
+    }
+  }
 }
 </script>
 <style lang="scss">

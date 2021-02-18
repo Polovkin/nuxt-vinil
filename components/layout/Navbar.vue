@@ -17,21 +17,25 @@
   </nav>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from 'nuxt-property-decorator'
+<script >
 
-@Component({})
-export default class Navbar extends Vue {
-  public navigation = [
-    {
-      text: 'Магазин',
-      link: '#order'
-    },
-    {
-      text: 'Контакты',
-      link: '#contacts'
+export default {
+  name: 'Navbar',
+  data () {
+    return {
+      navigation: [
+        {
+          text: 'Магазин',
+          link: '#order'
+        },
+        {
+          text: 'Контакты',
+          link: '#contacts'
+        }
+      ]
     }
-  ]
+  }
+
 }
 </script>
 

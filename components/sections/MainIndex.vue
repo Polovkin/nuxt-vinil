@@ -14,7 +14,7 @@
         <h1 class="main__title-heading ">
           Магазин виниловых пластинок
         </h1>
-<!--        <p
+        <!--        <p
           v-for="(device,key,index) of $device"
           :key="index"
           class="main__title-text"
@@ -29,22 +29,10 @@
   </section>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from 'nuxt-property-decorator'
-import ButtonWave from '~/components/reusable/ButtonWave.vue'
-import Form from '~/components/reusable/Form.vue'
+<script>
 
-@Component({
-  components: {
-    ButtonWave,
-    Form
-  },
-  mounted () {
-
-  }
-})
-export default class Main extends Vue {
-
+export default {
+  name: 'Main'
 }
 </script>
 

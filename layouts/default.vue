@@ -1,19 +1,17 @@
 <template>
   <div>
-
-
+    <Header />
+    <main>
       <nuxt />
-
-
+    </main>
+    <Footer />
   </div>
 </template>
 
-<script >
-
+<script>
 
 export default {
-  components: {
-  },
+
   data () {
     return {
       drawer: null
