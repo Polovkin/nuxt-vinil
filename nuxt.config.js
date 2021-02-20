@@ -1,3 +1,4 @@
+import i18n from './config/i18n'
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
 
@@ -23,22 +24,26 @@ export default {
       }
     ]
   },
+
   css: [],
+
   styleResources: {
     scss: '@/assets/scss/core/_global.scss'
   },
+
   plugins: ['~/plugins/viewport.js'],
 
   components: true,
 
   buildModules: [
     // @TODO: set IOS tablet device type
-    //'@nuxtjs/device',
+    // '@nuxtjs/device',
     '@aceforth/nuxt-optimized-images'
 
   ],
 
   modules: [
+    'nuxt-i18n',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
@@ -58,13 +63,16 @@ export default {
     // @TODO: set sitemap
     // '@nuxtjs/sitemap'
   ],
+
   robots: {
     UserAgent: '*',
     Disallow: '/'
   },
+
   sitemap: {
     // options
   },
+
   babel: {
     presets (env, [preset, options]) {
       return [
@@ -72,6 +80,7 @@ export default {
       ]
     }
   },
+
   axios: {},
 
   build: {
@@ -92,13 +101,21 @@ export default {
       })
     ]
   },
+
   optimizedImages: {
     inlineImageLimit: 1000,
     handleImages: ['jpeg', 'png', 'svg', 'webp', 'jpg'],
     optimizeImages: true,
     optimizeImagesInDev: true
   },
+
   pwa: {
     icon: {}
+  },
+  i18n: {
+    locales: ['ru', 'en'],
+    defaultLocale: 'ru',
+    vueI18n: i18n
   }
+
 }

@@ -41,6 +41,7 @@
     "imagemin-pngquant": "^9.0.1",
     "imagemin-svgo": "^8.0.0",
     "lqip-loader": "^2.2.1",
+    "nuxt-i18n": "^6.20.1",
     "postcss-sort-media-queries": "^1.7.26",
     "pug": "^3.0.0",
     "pug-plain-loader": "^1.1.0",

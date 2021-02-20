@@ -10,14 +10,20 @@
           :to="links.link"
           class="navigation__link animate-link"
         >
-          {{ links.text }}
+          {{ $t('header.shop') }}
         </nuxt-link>
       </li>
     </ul>
+    <nuxt-link :to="switchLocalePath('en')">
+      English
+    </nuxt-link>
+    <nuxt-link :to="switchLocalePath('ru')">
+      Russian
+    </nuxt-link>
   </nav>
 </template>
 
-<script >
+<script>
 
 export default {
   name: 'Navbar',
@@ -34,8 +40,10 @@ export default {
         }
       ]
     }
+  },
+  mounted () {
+    console.log(this.$t('header'))
   }
-
 }
 </script>
 
@@ -56,7 +64,7 @@ export default {
 
   &__link {
     color: $color__font--secondary;
-    font-family: DrukCyr,serif;
+    font-family: DrukCyr, serif;
     font-size: 26px;
     letter-spacing: 2px;
   }
